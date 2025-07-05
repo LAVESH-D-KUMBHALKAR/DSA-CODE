@@ -46,5 +46,3 @@ if (isPrimeNumberV2($number)) {
 }
 
 ?>
-
-?>
