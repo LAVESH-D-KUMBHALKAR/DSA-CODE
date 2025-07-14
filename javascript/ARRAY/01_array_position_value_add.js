@@ -31,3 +31,21 @@ let lValue = 112;
 let lPostition = 1;
 
 console.log(addValueAtPostion(lArray, lValue, lPostition))
+
+
+
+
+
+// function replaceAtPosition(arr, newValue, position) {
+//     let newArr = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === position) {
+//             newArr[i] = newValue; // Replace at target position
+//         } else {
+//             newArr[i] = arr[i];   // Copy other values as-is
+//         }
+//     }
+
+//     return newArr;
+// }
