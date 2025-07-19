@@ -1,5 +1,12 @@
 
 
+/**
+ * Finds the highest common factor (HCF) of two numbers using the Euclidean algorithm.
+ *
+ * @param {number} a - The first number.
+ * @param {number} b - The second number.
+ * @returns {number} The highest common factor of a and b.
+ */
 function findHCF(a, b) {
     a = Math.abs(a);
     b = Math.abs(b);
