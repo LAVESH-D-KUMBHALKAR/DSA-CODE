@@ -4,24 +4,24 @@ function removeDuplicate(arr){
 
     if(arr.length === 0) return arr;
 
-    let writeIndex = 1;
+    let j = 1;
 
-    for(let readIndex = 1; readIndex < arr.length; readIndex++){
+    for(let i = 1; i < arr.length; i++){
 
-        // console.log('readIndex:' + readIndex, 'writeIndex:' + writeIndex);
-        if(arr[readIndex] !== arr[writeIndex - 1]){
+        // console.log('i:' + i, 'j:' + j);
+        if(arr[i] !== arr[j - 1]){
 
-            arr[writeIndex] = arr[readIndex];
+            arr[j] = arr[i];
 
-            writeIndex++;
+            j++;
 
         }
     }
 
     console.log(arr);
      // Truncate array to remove extra elements
-    arr.length = writeIndex;
-    // console.log(arr.length, writeIndex);
+    arr.length = j;
+    // console.log(arr.length, j);
     return arr;
     
 }
