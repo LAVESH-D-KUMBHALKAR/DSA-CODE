@@ -1,20 +1,30 @@
+
+
+/**
+ * This function takes an array of stock prices and returns the maximum possible profit that can be made with one buy and one sell transaction.
+ *
+ * @param {number[]} prices - An array of stock prices in the order they were observed.
+ * @returns {number} The maximum possible profit.
+ */
 function maxProfit(prices) {
-    let minPrice = Infinity;
     let maxProfit = 0;
+    let n = prices.length;
 
-    for (let i = 0; i < prices.length; i++) {
-        // Track the lowest price so far
-        if (prices[i] < minPrice) {
-            minPrice = prices[i];
-        } 
-        // Calculate profit if sold today and update maxProfit if it's better
-        else if (prices[i] - minPrice > maxProfit) {
-            maxProfit = prices[i] - minPrice;
+    for (let i = 0; i < n; i++) {
+
+        for (let j = i + 1; j < n; j++) {
+
+            let profit = prices[j] - prices[i];
+
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
         }
-    }
 
+    }
     return maxProfit;
 }
 
 
-console.log(maxProfit([7,1,5,3,6,4]));
+console.log(maxProfit([7, 6, 4, 3, 1])); // Output: 0 (No profit)
+console.log(maxProfit([2, 4, 1]));       // Output: 2
